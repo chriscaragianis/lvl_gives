@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.0'
 
+gem 'haml'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
@@ -38,6 +39,7 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
   gem 'minitest-rails' 
   gem 'database_cleaner'
+  gem 'minitest-rails-capybara'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
