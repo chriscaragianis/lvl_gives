@@ -14,15 +14,15 @@ When /^user clicks (.*)$/ do |content|
 end
 
 Then /^(.*) page is loaded$/ do |dest|
-  assert page.current_url.include? StepHelpers.destination[dest] 
+  assert page.current_url.include? StepHelpers.destination[dest]
 end
 
 Given /^(.*) field is completed$/ do |field|
-  if !field.include? 'password' then
-    assert StepHelpers.validate_input find(".#{field}-field")
-  else
-    assert StepHelpers.validate_password find(".#{field}-field")
-  end
+  fill_in("account_#{field}", :with => "Fake #{field}")
+end
+
+When /^user submits form$/ do
+  click_on("Save Account")
 end
 
 Given(/^a logged in user$/) do

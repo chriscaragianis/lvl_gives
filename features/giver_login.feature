@@ -15,12 +15,13 @@ Feature: Giver Login
     Then new account page is loaded 
 
   Scenario: User clicks Create Account button on new account page
-    Given first-name field is completed
-    And last-name field is completed
+    Given user clicks Create Account button on header
+    And first_name field is completed
+    And last_name field is completed
     And email field is completed
     And password field is completed
-    And confirm-password field is completed
-    When user clicks the Create Account button on new account page
+    And confirm_password field is completed
+    When user submits form 
     Then a new user object is created
 
   Scenario: User clicks Sign In buttons

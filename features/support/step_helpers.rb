@@ -6,7 +6,7 @@ class StepHelpers
   @css_matchers = {'Create Account button on header' => 'button.create-account'}
   @content_matchers = {'Create Account button on header' => 'Sign Up!'}
 
-  def validate_input input
+  def self.validate_input input
     if input.length < 1 or input.length > 255 then
       return false
     end
