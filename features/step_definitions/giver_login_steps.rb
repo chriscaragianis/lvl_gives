@@ -41,8 +41,8 @@ Then(/^the user is prompted to take the values survey$/) do
   pending # express the regexp above with the code you wish you had
 end
 
-Then(/^a new user object is created$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^a new account is created$/) do
+  assert Account.exists?(first_name: 'Fake first_name')
 end
 
 When(/^the user clicks the Sign In button$/) do

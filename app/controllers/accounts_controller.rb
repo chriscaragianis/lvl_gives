@@ -2,6 +2,10 @@ class AccountsController < ApplicationController
   def new
   end
 
+  def index
+    @accounts = Account.all
+  end
+
   def create
     @account = Account.new(account_params)
 

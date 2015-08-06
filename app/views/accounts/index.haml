@@ -1,0 +1,12 @@
+%table
+  %tr
+    %td First name
+    %td Last name
+    %td email
+    %td password
+  - @accounts.each do |account|
+    %tr
+      %td= account.first_name
+      %td= account.last_name
+      %td= account.email
+      %td= account.password
