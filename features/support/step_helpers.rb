@@ -11,6 +11,7 @@ class StepHelpers
     end
     return true 
   end
+
   class << self
     attr_reader :destination, :css_matchers, :content_matchers
   end
