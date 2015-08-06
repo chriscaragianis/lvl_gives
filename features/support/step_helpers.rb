@@ -1,7 +1,8 @@
 include Capybara::DSL
 
 class StepHelpers
-  @destination = {'welcome page' => "/index.html"}
+  @destination = {'welcome page' => "/index.html",
+    'new account' => 'accounts/new'}
   @css_matchers = {'Create Account button on header' => 'button.create-account'}
   @content_matchers = {'Create Account button on header' => 'Sign Up!'}
 
